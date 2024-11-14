@@ -1,0 +1,15 @@
+<div class="pages-container">
+  <div class="page-header">
+    <h5>Pages</h5>
+    <a href="#">Edit</a>
+  </div>
+  <div class="page-box-container">
+    <div *ngFor="let pages of pageData">
+      <div class="box-style" [class]="pages.background">
+        <i class="pages-icon" [class]="pages.icon"></i>
+        <p class="pages-header">{{ pages.header }}</p>
+        <p class="pages-text">{{ pages.label }}</p>
+      </div>
+    </div>
+  </div>
+</div>
