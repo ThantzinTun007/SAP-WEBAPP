@@ -1,0 +1,88 @@
+<nav class="navbar">
+  <div class="navbar-container">
+    <div class="navbar-logo-searchbar">
+      <div class="logo-container">
+        <img src="/assets/logo/SAP_logo.png" alt="logo" />
+        <span>Home<i class="fa-solid fa-chevron-down"></i></span>
+      </div>
+      <div class="searchbar-container">
+        <div class="all-btn">All <i class="fa-solid fa-chevron-down"></i></div>
+        <div class="searchbar"></div>
+        <input type="text" class="search-icon" placeholder="Search" />
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <div class="noti-profile-container">
+        <i class="fa-regular fa-circle-question"></i>
+        <i class="fa-regular fa-bell"></i>
+        <i class="fa-regular fa-circle-user"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="navbar-items">
+    <ul>
+      <li
+        [ngClass]="{ active: activeItem === 'home' }"
+        (click)="setActive('home')"
+      >
+        <a href="#">My Home</a>
+      </li>
+      <li
+        [ngClass]="{ active: activeItem === 'document' }"
+        (click)="setActive('document')"
+      >
+        <a href="#">Document Management</a>
+      </li>
+      <li
+        [ngClass]="{ active: activeItem === 'bom' }"
+        (click)="setActive('bom')"
+      >
+        <a href="#">BOM Management</a>
+      </li>
+      <li
+        [ngClass]="{ active: activeItem === 'orderBom' }"
+        (click)="setActive('orderBom')"
+      >
+        <a href="#">Order BOM Management</a>
+      </li>
+      <li
+        [ngClass]="{ active: activeItem === 'purchasing' }"
+        (click)="setActive('purchasing')"
+      >
+        <a href="#">Purchasing <i class="fa-solid fa-chevron-down"></i></a>
+      </li>
+      <li
+        [ngClass]="{ active: activeItem === 'sourcing' }"
+        (click)="setActive('sourcing')"
+      >
+        <a href="#"
+          >Sourcing and Contracting <i class="fa-solid fa-chevron-down"></i
+        ></a>
+      </li>
+      <li
+        [ngClass]="{ active: activeItem === 'engDiscrete' }"
+        (click)="setActive('engDiscrete')"
+      >
+        <a href="#"
+          >Engineering-Discrete <i class="fa-solid fa-chevron-down"></i
+        ></a>
+      </li>
+      <li
+        [ngClass]="{ active: activeItem === 'engProcess' }"
+        (click)="setActive('engProcess')"
+      >
+        <a href="#"
+          >Engineering-Process <i class="fa-solid fa-chevron-down"></i
+        ></a>
+      </li>
+    </ul>
+
+    <div class="navbar-back">
+      <span
+        [ngClass]="{ active: activeItem === 'more' }"
+        (click)="setActive('more')"
+        >More<i class="fa-solid fa-chevron-down"></i
+      ></span>
+    </div>
+  </div>
+</nav>
