@@ -1,0 +1,59 @@
+.app-activities-container {
+  width: 100%;
+  height: 65vh;
+  padding: 10px 40px;
+}
+
+.app-activities-container .header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header h6 {
+  color: grey;
+  font-weight: 600;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.back-header {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.back-header a {
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.category-links {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(162, 159, 159, 0.591);
+}
+
+.category-links span {
+  height: 40px;
+  margin-right: 20px;
+  font-size: 13px;
+  color: rgba(41, 40, 40, 0.552);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.category-links span.active {
+  color: rgb(16, 70, 171);
+  border-bottom: 2px solid rgb(16, 70, 171);
+}
+
+.menu-box-container {
+  width: 100%;
+  height: 45vh;
+  margin-top: 15px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

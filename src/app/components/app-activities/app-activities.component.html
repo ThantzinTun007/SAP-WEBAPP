@@ -1,0 +1,29 @@
+<div class="app-activities-container">
+  <div class="header">
+    <h6>Apps and Activities</h6>
+    <div class="back-header">
+      <a href="#">Inport Apps Now</a>
+      <a href="#">Add Apps</a>
+    </div>
+  </div>
+  <div class="category-links">
+    <span
+      [ngClass]="{ active: activeItem === 'fav' }"
+      (click)="setActive('fav')"
+      >Favorite</span
+    >
+    <span
+      [ngClass]="{ active: activeItem === 'recent' }"
+      (click)="setActive('recent')"
+      >Recent Activities</span
+    >
+    <span
+      [ngClass]="{ active: activeItem === 'freq' }"
+      (click)="setActive('freq')"
+      >Frequently Used</span
+    >
+  </div>
+  <div class="menu-box-container">
+        
+  </div>
+</div>
