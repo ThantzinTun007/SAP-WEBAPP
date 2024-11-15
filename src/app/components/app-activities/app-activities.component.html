@@ -1,4 +1,4 @@
-<div class="app-activities-container">
+<!-- <div class="app-activities-container">
   <div class="header">
     <h6>Apps and Activities</h6>
     <div class="back-header">
@@ -25,10 +25,38 @@
   </div>
   <div class="menu-box-container">
     <div class="app-container">
-      <div class="app">
-        <img src="/assets/logo/SAP_logo.png" alt="logo" />
-        <div class="name">application application</div>
+      <div class="app" *ngFor="let app of apps">
+        <img [src]="app.imgPath" alt="logo" />
+        <div class="name">{{app.name}}</div>
       </div>
     </div>
+  </div>
+</div> -->
+
+
+<div class="app-container">
+  <h2>Apps and Activities</h2>
+
+  <!-- Tab Navigation -->
+  <div class="tabs">
+    <span 
+      *ngFor="let category of ['Favorites', 'Recent Activities', 'Frequently Used']" 
+      (click)="selectCategory(category)"
+      [class.active]="selectedCategory === category">
+      {{ category }}
+    </span>
+  </div>
+
+  <!-- App Grid -->
+  <div class="app-grid">
+    <div class="app" *ngFor="let app of apps" [class.hidden]="app.category !== selectedCategory">
+      <img [src]="app.imgPath" [alt]="app.name" />
+      <div class="name">{{ app.name }}</div>
+    </div>
+  </div>
+
+  <!-- Options -->
+  <div class="options">
+    <a href="#">Import Apps Now</a> | <a href="#">Add Apps</a>
   </div>
 </div>
