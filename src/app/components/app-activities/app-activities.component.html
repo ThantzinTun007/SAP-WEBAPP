@@ -17,14 +17,15 @@
     >
   </div>
 
-  <div class="app-grid">
+  <div class="apps-container">
     <div
-      class="app"
+      class="app-items"
       *ngFor="let app of apps"
       [class.hidden]="app.category !== selectedCategory"
     >
-      <img [src]="app.imgPath" [alt]="app.name" />
+      <img [src]="app.imgPath" [alt]="app.name" class="app-image" />
       <div class="name">{{ app.name }}</div>
+      <a href="#" class="three-spot">⚬⚬⚬ </a>
     </div>
   </div>
 </div>
