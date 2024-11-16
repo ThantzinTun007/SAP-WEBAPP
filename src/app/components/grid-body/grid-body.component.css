@@ -226,6 +226,7 @@
   margin-top: 15px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .dos-box-container .dos-box-style {
@@ -233,7 +234,30 @@
   height: 23vh;
   background-color: #f8f9fa;
   border: 1px solid #ddd;
-  padding: 16px;
+  padding: 20px 10px;
   margin-bottom: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  width: 100%;
+  font-size: 11px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header i {
+  font-size: 18px;
+  color: #efc21f;
+}
+
+.dos-box-style p {
+  font-size: 11px;
+  color: rgba(47, 46, 46, 0.732);
+  margin-top: 15px;
+}
+
+.hidden {
+  display: none;
 }

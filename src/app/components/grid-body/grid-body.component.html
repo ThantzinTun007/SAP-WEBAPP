@@ -132,7 +132,7 @@
     </div>
     <div class="dos-category">
       <span
-        *ngFor="let category of ['Tesks', 'Situations']"
+        *ngFor="let category of ['Tesk', 'Situation']"
         [class.active]="categoryDef === category"
         (click)="activeDos(category)"
       >
@@ -141,6 +141,21 @@
     </div>
   </div>
   <div class="dos-box-container">
-    <div class="dos-box-style" *ngFor="let dos of dos"></div>
+    <div
+      class="dos-box-style"
+      *ngFor="let dos of dos"
+      [class.hidden]="dos.category !== categoryDef"
+    >
+      <span class="header">
+        <i [class]="dos.icon"></i>
+        <span>{{ dos.header }}</span>
+      </span>
+      <p>
+        {{ dos.description }}
+      </p>
+      <p class="time">
+        {{ dos.time }}
+      </p>
+    </div>
   </div>
 </div>

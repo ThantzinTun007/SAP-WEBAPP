@@ -8,7 +8,7 @@ import { dosData } from './dos-data';
 })
 export class GridBodyComponent {
   dos = dosData;
-  categoryDef = 'Tesks';
+  categoryDef = 'Tesk';
 
   activeDos(category: any) {
     this.categoryDef = category;
