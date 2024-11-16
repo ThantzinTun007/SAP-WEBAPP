@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { dosData } from './dos-data';
 
 @Component({
   selector: 'app-grid-body',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './grid-body.component.css',
 })
 export class GridBodyComponent {
-  
+  dos = dosData;
+  categoryDef = 'Tesks';
+
+  activeDos(category: any) {
+    this.categoryDef = category;
+  }
 }

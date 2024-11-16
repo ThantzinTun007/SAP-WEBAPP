@@ -93,9 +93,54 @@
       </div>
       <a href="#"><i class="fa-solid fa-arrow-rotate-right"></i>20 min. ago</a>
     </div>
-    <div class="box-style">
+    <div class="box-style2">
       <h4>Evaluate Capacity</h4>
       <a href="#"><i class="fa-solid fa-arrow-rotate-right"></i>20 min. ago</a>
     </div>
+  </div>
+
+  <!-- for grid box -->
+  <div class="category-links">
+    <span>Cards (6)</span>
+    <div class="back-header">
+      <a href="#">Edit</a>
+      <a href="#"><i class="fa-solid fa-expand ms-4"></i></a>
+    </div>
+  </div>
+
+  <div class="grid-box-container">
+    <div class="grid-box-style"></div>
+    <div class="grid-box-style"></div>
+    <div class="grid-box-style"></div>
+    <div class="grid-box-style"></div>
+    <div class="grid-box-style"></div>
+  </div>
+
+  <!-- for Dos -->
+  <!-- <div class="category-links">
+    <span>Cards (6)</span>
+    <div class="back-header">
+      <a href="#"><i class="fa-solid fa-expand ms-4"></i></a>
+    </div>
+
+  </div> -->
+
+  <div class="dos-links">
+    <div class="title">
+      <span>To Dos</span>
+      <a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    </div>
+    <div class="dos-category">
+      <span
+        *ngFor="let category of ['Tesks', 'Situations']"
+        [class.active]="categoryDef === category"
+        (click)="activeDos(category)"
+      >
+        {{ category }}
+      </span>
+    </div>
+  </div>
+  <div class="dos-box-container">
+    <div class="dos-box-style" *ngFor="let dos of dos"></div>
   </div>
 </div>
