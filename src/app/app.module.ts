@@ -7,6 +7,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { PagesBodyComponent } from './components/pages-body/pages-body.component';
 import { BodyComponent } from './components/body/body.component';
 import { AppActivitiesComponent } from './components/app-activities/app-activities.component';
+import { GridBodyComponent } from './components/grid-body/grid-body.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { AppActivitiesComponent } from './components/app-activities/app-activiti
     NavbarComponent,
     PagesBodyComponent,
     BodyComponent,
-    AppActivitiesComponent
+    AppActivitiesComponent,
+    GridBodyComponent
   ],
   imports: [
     BrowserModule,

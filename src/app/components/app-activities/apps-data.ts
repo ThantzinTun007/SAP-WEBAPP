@@ -112,6 +112,11 @@ export const appsName = [
     category: 'Recent Activities',
   },
   {
+    imgPath: 'assets/logo/icon5.png',
+    name: 'Schedule MRP Runs',
+    category: 'Recent Activities',
+  },
+  {
     imgPath: 'assets/logo/icon6.png',
     name: 'Schedule MRP Runs',
     category: 'Recent Activities',
@@ -121,7 +126,11 @@ export const appsName = [
     name: 'Schedule MRP Runs',
     category: 'Recent Activities',
   },
-
+  {
+    imgPath: 'assets/logo/icon5.png',
+    name: 'Schedule MRP Runs',
+    category: 'Recent Activities',
+  },
 
   // for fre
   {
@@ -161,6 +170,16 @@ export const appsName = [
   },
   {
     imgPath: 'assets/logo/icon1.png',
+    name: 'Schedule MRP Runs',
+    category: 'Frequently Used',
+  },
+  {
+    imgPath: 'assets/logo/icon5.png',
+    name: 'Schedule MRP Runs',
+    category: 'Frequently Used',
+  },
+  {
+    imgPath: 'assets/logo/icon5.png',
     name: 'Schedule MRP Runs',
     category: 'Frequently Used',
   },

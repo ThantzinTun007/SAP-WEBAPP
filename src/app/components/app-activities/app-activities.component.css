@@ -52,7 +52,7 @@
 
 .apps-container {
   width: 100%;
-  height: auto;
+  height: 47vh;
   margin-top: 10px;
   padding: 20px;
   background-color: #f8f9fa;
@@ -77,10 +77,6 @@
   border-radius: 10px;
 }
 
-.app-items:hover .three-spot {
-  display: block; 
-}
-
 .app-image {
   width: 25px;
   height: 25px;
@@ -89,14 +85,6 @@
 
 .name {
   font-size: 12px;
-}
-
-.three-spot {
-  color: black;
-  text-decoration: none;
-  font-size: 9px;
-  margin-left: 6px;
-  display: none;
 }
 
 .hidden {
