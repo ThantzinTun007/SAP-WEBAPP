@@ -1,4 +1,4 @@
-/* .app-activities-container {
+.app-activities-container {
   width: 100%;
   height: 65vh;
   padding: 10px 40px;
@@ -76,33 +76,10 @@
 
 .app img {
   width: 50px;
-} */
-
-
-.app-container {
-  font-family: Arial, sans-serif;
 }
 
-h2 {
-  margin: 0;
-  padding: 10px;
-}
-
-.tabs {
-  display: flex;
-  gap: 20px;
-  padding: 10px 0;
-  border-bottom: 1px solid #ccc;
-}
-
-.tabs span {
-  cursor: pointer;
-  padding: 5px;
-}
-
-.tabs span.active {
-  font-weight: bold;
-  border-bottom: 2px solid #0073e6;
+.app.hidden {
+  display: none;
 }
 
 .app-grid {
@@ -151,7 +128,6 @@ h2 {
   text-decoration: underline;
 }
 
-/* Hide elements not in the selected category */
 .hidden {
   display: none;
 }
