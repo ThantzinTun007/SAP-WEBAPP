@@ -137,40 +137,40 @@
         <canvas id="chart3"></canvas>
       </div>
     </div>
-  </div>
 
-  <!-- for Dos -->
-  <div class="dos-links">
-    <div class="title">
-      <span>To Dos</span>
-      <a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    <!-- for Dos -->
+    <div class="dos-links">
+      <div class="title">
+        <span>To Dos</span>
+        <a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+      </div>
+      <div class="dos-category">
+        <span
+          *ngFor="let category of ['Tesk', 'Situation']"
+          [class.active]="categoryDef === category"
+          (click)="activeDos(category)"
+        >
+          {{ category }}
+        </span>
+      </div>
     </div>
-    <div class="dos-category">
-      <span
-        *ngFor="let category of ['Tesk', 'Situation']"
-        [class.active]="categoryDef === category"
-        (click)="activeDos(category)"
+    <div class="dos-box-container">
+      <div
+        class="dos-box-style"
+        *ngFor="let dos of dos"
+        [class.hidden]="dos.category !== categoryDef"
       >
-        {{ category }}
-      </span>
-    </div>
-  </div>
-  <div class="dos-box-container">
-    <div
-      class="dos-box-style"
-      *ngFor="let dos of dos"
-      [class.hidden]="dos.category !== categoryDef"
-    >
-      <span class="header">
-        <i [class]="dos.icon"></i>
-        <span>{{ dos.header }}</span>
-      </span>
-      <p>
-        {{ dos.description }}
-      </p>
-      <p class="time">
-        {{ dos.time }}
-      </p>
+        <span class="header">
+          <i [class]="dos.icon"></i>
+          <span>{{ dos.header }}</span>
+        </span>
+        <p>
+          {{ dos.description }}
+        </p>
+        <p class="time">
+          {{ dos.time }}
+        </p>
+      </div>
     </div>
   </div>
 </div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { menuItems } from './menuItem';
 
 @Component({
   selector: 'app-navbar',
@@ -6,9 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './navbar.component.css',
 })
 export class NavbarComponent {
-  activeItem: string | null = null;
+  menu = menuItems;
+  activeItem: string = 'home';
 
-  setActive(item: string): void {
-    this.activeItem = this.activeItem === item ? null: item;
+  setActive(menuItem: string): void {
+    this.activeItem = menuItem;
   }
 }
