@@ -6,7 +6,13 @@
         <span>Home<i class="fa-solid fa-chevron-down"></i></span>
       </div>
       <div class="searchbar-container">
-        <div class="all-btn">All <i class="fa-solid fa-chevron-down"></i></div>
+        <div class="all-btn">
+          <select id="optionsDropdown" [(ngModel)]="defOption">
+            <option *ngFor="let option of options" [value]="option">
+              {{ option }}
+            </option>
+          </select>
+        </div>
         <div class="searchbar"></div>
         <input type="text" class="search-icon" placeholder="Search" />
         <i class="fa-solid fa-magnifying-glass"></i>
@@ -14,7 +20,39 @@
       <div class="noti-profile-container">
         <i class="fa-regular fa-circle-question"></i>
         <i class="fa-regular fa-bell"></i>
-        <i class="fa-regular fa-circle-user"></i>
+        <div class="user-icon-container">
+          <!-- User Icon -->
+          <span (click)="toggleLoginForm()">
+            <i class="fa-regular fa-circle-user"></i>
+          </span>
+
+          <!-- Login Form -->
+          <div *ngIf="showLoginForm" class="login-form-overlay">
+            <div class="login-form">
+              <button class="close-btn" (click)="toggleLoginForm()">✖</button>
+              <h2>Log In</h2>
+              <form>
+                <div>
+                  <label for="username">Username</label>
+                  <input
+                    id="username"
+                    type="text"
+                    placeholder="Enter your username"
+                  />
+                </div>
+                <div>
+                  <label for="password">Password</label>
+                  <input
+                    id="password"
+                    type="password"
+                    placeholder="Enter your password"
+                  />
+                </div>
+                <button type="submit">Login</button>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -42,4 +80,53 @@
       ></span>
     </div>
   </div>
+
+  <i
+    class="fa fa-times close_icon"
+    (click)="toggleSidebar()"
+    *ngIf="isSidebarOpen"
+  ></i>
+
+  <i
+    class="fa fa-bars hamburger_icon"
+    (click)="toggleSidebar()"
+    *ngIf="!isSidebarOpen"
+  ></i>
 </nav>
+
+<!-- for sidebar menu -->
+<div class="sidebar" [class.open]="isSidebarOpen">
+  <div class="d-flex justify-content-between">
+    <a class="sidebar_item">My Home</a>
+  </div>
+  <hr />
+  <div class="d-flex justify-content-between">
+    <a class="sidebar_item">Document Management</a>
+  </div>
+  <hr />
+  <div class="d-flex justify-content-between">
+    <a class="sidebar_item">BOM Management</a>
+  </div>
+
+  <hr />
+  <div class="d-flex justify-content-between">
+    <a class="sidebar_item">Purchasing</a>
+  </div>
+
+  <hr />
+  <div class="d-flex justify-content-between">
+    <a class="sidebar_item">Sourcing and Contracting</a>
+  </div>
+
+  <hr />
+  <div class="d-flex justify-content-between">
+    <a class="sidebar_item">Engineering-Discrete </a>
+  </div>
+
+  <hr />
+  <div class="d-flex justify-content-between">
+    <a class="sidebar_item">Engineering-Process </a>
+  </div>
+  <hr />
+  <span class="menu_style explore hidden-explore">More</span>
+</div>

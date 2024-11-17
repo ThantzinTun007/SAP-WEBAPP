@@ -4,6 +4,7 @@ import {
   provideClientHydration,
 } from '@angular/platform-browser';
 
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -23,7 +24,7 @@ import { DocumentManagementScreenComponent } from './components/document-managem
     GridBodyComponent,
     DocumentManagementScreenComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule,FormsModule],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],
 })
