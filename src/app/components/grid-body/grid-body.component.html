@@ -99,7 +99,7 @@
     </div>
   </div>
 
-  <!-- for grid box -->
+  <!-- for chart box -->
   <div class="category-links">
     <span>Cards (6)</span>
     <div class="back-header">
@@ -108,12 +108,35 @@
     </div>
   </div>
 
-  <div class="grid-box-container">
-    <div class="grid-box-style"></div>
-    <div class="grid-box-style"></div>
-    <div class="grid-box-style"></div>
-    <div class="grid-box-style"></div>
-    <div class="grid-box-style"></div>
+  <div class="dashboard-grid">
+    <!-- Card 1 -->
+    <div class="dashboard-card">
+      <h3>Profit Margin</h3>
+      <p>By Month</p>
+      <h1>72.8%</h1>
+      <div>
+        <canvas id="chart1"></canvas>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="dashboard-card">
+      <h3>More than 100 Days without Consumption</h3>
+      <p>Total value: USD</p>
+      <h1>1.51K</h1>
+      <div>
+        <canvas id="chart2"></canvas>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="dashboard-card">
+      <h3>Purchasing Spend</h3>
+      <p>Purchasing Spend Trend</p>
+      <div>
+        <canvas id="chart3"></canvas>
+      </div>
+    </div>
   </div>
 
   <!-- for Dos -->
@@ -148,41 +171,6 @@
       <p class="time">
         {{ dos.time }}
       </p>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-<div class="dashboard-grid">
-  <!-- Card 1 -->
-  <div class="dashboard-card">
-    <h3>Profit Margin</h3>
-    <p>By Month</p>
-    <h1>72.8%</h1>
-    <div>
-      <canvas id="chart1"></canvas>
-    </div>
-  </div>
-
-  <!-- Card 2 -->
-  <div class="dashboard-card">
-    <h3>More than 100 Days without Consumption</h3>
-    <p>Total value: USD</p>
-    <h1>1.51K</h1>
-    <div>
-      <canvas id="chart2"></canvas>
-    </div>
-  </div>
-
-  <!-- Card 3 -->
-  <div class="dashboard-card">
-    <h3>Purchasing Spend</h3>
-    <p>Purchasing Spend Trend</p>
-    <div>
-      <canvas id="chart3"></canvas>
     </div>
   </div>
 </div>

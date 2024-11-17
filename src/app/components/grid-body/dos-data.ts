@@ -2,8 +2,8 @@ export const dosData = [
   {
     category: 'Tesk',
     icon: '',
-    header: 'You do not have any tesks.',
-    description: 'when you do,you will see them here',
+    header: 'You do not have any tesks.when you do,you will see them here',
+    description: '',
     time: '',
   },
   {
