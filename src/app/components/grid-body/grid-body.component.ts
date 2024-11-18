@@ -23,7 +23,6 @@ export class GridBodyComponent implements AfterViewInit {
 
   initializeCharts() {
     // Chart 1
-
     new Chart('chart1', {
       type: 'bar',
       data: {
@@ -31,19 +30,24 @@ export class GridBodyComponent implements AfterViewInit {
         datasets: [
           {
             label: 'Sales Volume',
-            data: [10000, 20000, 150000],
+            data: [10000, 20000, 150000, 200000],
             backgroundColor: 'rgba(54, 162, 235, 0.5)',
           },
           {
             label: 'Profit Margin',
-            data: [30, 50, 80],
+            data: [50000, 50, 100000],
             type: 'line',
             borderColor: 'rgba(255, 99, 132, 1)',
             fill: false,
           },
         ],
       },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false, 
+      },
     });
+   
 
     // Chart 2
     new Chart('chart2', {
@@ -65,6 +69,10 @@ export class GridBodyComponent implements AfterViewInit {
           },
         ],
       },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+      },
     });
 
     // Chart 3
@@ -81,11 +89,15 @@ export class GridBodyComponent implements AfterViewInit {
           },
           {
             label: 'Planned Spend',
-            data: [0, 800000, 0],
+            data: [0, 100000, 0],
             borderColor: 'rgba(54, 162, 235, 1)',
             fill: false,
           },
         ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
       },
     });
   }

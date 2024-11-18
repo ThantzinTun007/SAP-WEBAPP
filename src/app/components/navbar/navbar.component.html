@@ -33,15 +33,13 @@
               <h2>Log In</h2>
               <form>
                 <div>
-                  <label for="username">Username</label>
                   <input
-                    id="username"
-                    type="text"
-                    placeholder="Enter your username"
+                    id="email"
+                    type="email"
+                    placeholder="Enter your email"
                   />
                 </div>
                 <div>
-                  <label for="password">Password</label>
                   <input
                     id="password"
                     type="password"
@@ -96,37 +94,17 @@
 
 <!-- for sidebar menu -->
 <div class="sidebar" [class.open]="isSidebarOpen">
-  <div class="d-flex justify-content-between">
-    <a class="sidebar_item">My Home</a>
-  </div>
-  <hr />
-  <div class="d-flex justify-content-between">
-    <a class="sidebar_item">Document Management</a>
-  </div>
-  <hr />
-  <div class="d-flex justify-content-between">
-    <a class="sidebar_item">BOM Management</a>
-  </div>
-
-  <hr />
-  <div class="d-flex justify-content-between">
-    <a class="sidebar_item">Purchasing</a>
+  <div
+    class="sidebar-menu"
+    *ngFor="let item of menu"
+    [ngClass]="{ active: activeItem === item.key }"
+    (click)="setActive(item.key)"
+    [routerLink]="item.route"
+  >
+    <a class="sidebar_item"> {{ item.name }}</a>
+    <hr />
   </div>
 
-  <hr />
-  <div class="d-flex justify-content-between">
-    <a class="sidebar_item">Sourcing and Contracting</a>
-  </div>
-
-  <hr />
-  <div class="d-flex justify-content-between">
-    <a class="sidebar_item">Engineering-Discrete </a>
-  </div>
-
-  <hr />
-  <div class="d-flex justify-content-between">
-    <a class="sidebar_item">Engineering-Process </a>
-  </div>
   <hr />
   <span class="menu_style explore hidden-explore">More</span>
 </div>

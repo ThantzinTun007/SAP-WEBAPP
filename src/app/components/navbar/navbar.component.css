@@ -149,7 +149,7 @@
 }
 
 .login-form button[type="submit"] {
-  background: #3A556B;
+  background: #3a556b;
   color: white;
   border: none;
   padding: 10px;
@@ -258,8 +258,8 @@ li.active {
 .sidebar {
   position: fixed;
   top: 80px;
-  right: -350px;
-  width: 350px;
+  right: -300px;
+  width: 300px;
   height: calc(100% - 80px);
   background-color: #fff;
   box-shadow: -2px 0 5px rgba(36, 36, 36, 0.106);
@@ -275,15 +275,22 @@ li.active {
   right: 0;
 }
 
-.sidebar_item {
-  padding: 2px 15px;
-  text-decoration: none;
-  color: #333;
-  font-size: 13px;
+.sidebar .sidebar-menu {
+  width: 100%;
+  height: auto;
 }
 
-.sidebar div:hover {
+.sidebar .sidebar-menu:hover {
   cursor: pointer;
+}
+
+.sidebar_item {
+  width: 100%;
+  height: 60px;
+  font-size: 15px;
+  color: #1c1c1d;
+  padding: 16px 20px;
+  text-decoration: none;
 }
 
 hr {
