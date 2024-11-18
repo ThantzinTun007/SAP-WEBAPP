@@ -18,7 +18,9 @@
         <i class="fa-solid fa-magnifying-glass"></i>
       </div>
       <div class="noti-profile-container">
-        <i class="fa-regular fa-circle-question"></i>
+        <i class="fa-regular fa-circle-question" (click)="toggleQuestion()">
+        </i>
+
         <i class="fa-regular fa-bell"></i>
         <div class="user-icon-container">
           <!-- User Icon -->
@@ -26,28 +28,37 @@
             <i class="fa-regular fa-circle-user"></i>
           </span>
 
-          <!-- Login Form -->
+          <!-- User Form -->
           <div *ngIf="showLoginForm" class="login-form-overlay">
             <div class="login-form">
               <button class="close-btn" (click)="toggleLoginForm()">✖</button>
-              <h2>Log In</h2>
-              <form>
-                <div>
-                  <input
-                    id="email"
-                    type="email"
-                    placeholder="Enter your email"
-                  />
+              <img
+                src="/assets/logo/profile.png"
+                alt="profile"
+                class="profile"
+              />
+              <h3>Thant Zin Tun</h3>
+              <div class="profile-form">
+                <div class="profile-style">
+                  <span>Username</span>
+                  <p>Thant Zin Tun</p>
                 </div>
-                <div>
-                  <input
-                    id="password"
-                    type="password"
-                    placeholder="Enter your password"
-                  />
+
+                <div class="profile-style">
+                  <span>Email</span>
+                  <p>tztun&commat;.com</p>
                 </div>
-                <button type="submit">Login</button>
-              </form>
+
+                <div class="profile-style">
+                  <span>Address</span>
+                  <p>Mandalay</p>
+                </div>
+
+                <div class="profile-style">
+                  <span>DOB</span>
+                  <p>DEC 7,2001</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -92,6 +103,20 @@
   ></i>
 </nav>
 
+<!-- for questionbar -->
+<div class="questionbar" [class.open]="isQuestion">
+  <div class="question-header">
+    <h4 class="color-grey">Help Topics</h4>
+    <button class="btn color-grey">Search Help Topics</button>
+    <button class="btn color-grey">SAP Community</button>
+    <button class="btn color-grey">Quick Tour</button>
+  </div>
+
+  <div class="questions" *ngFor="let qus of question">
+    <a href="#" class="color-grey">{{ qus }}</a>
+  </div>
+</div>
+
 <!-- for sidebar menu -->
 <div class="sidebar" [class.open]="isSidebarOpen">
   <div
@@ -102,9 +127,7 @@
     [routerLink]="item.route"
   >
     <a class="sidebar_item"> {{ item.name }}</a>
-    <hr />
   </div>
 
-  <hr />
   <span class="menu_style explore hidden-explore">More</span>
 </div>

@@ -170,7 +170,7 @@
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 16px;
-  margin: 0 auto;
+  margin: 0 auto 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -283,4 +283,19 @@
 
 .hidden {
   display: none;
+}
+
+@media (max-width: 1150px) {
+  .items-box-container {
+    width: 100%;
+  }
+
+  .items-box-container .box-style,
+  .box-style2 {
+    margin: 0 auto 20px;
+  }
+
+  .dos-box-container .dos-box-style {
+    margin: 0 auto 20px;
+  }
 }

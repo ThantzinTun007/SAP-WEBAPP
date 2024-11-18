@@ -33,3 +33,16 @@ export const menuItems = [
     icon: 'fa-chevron-down',
   },
 ];
+
+
+export const questions = [
+  'Find Help',
+  'Entry Page',
+  'Notifications',
+  'User Actions Menu',
+  'Built-in Support',
+  'To Dos',
+  'Pages',
+  'Apps and Activities',
+  'Insights'
+]

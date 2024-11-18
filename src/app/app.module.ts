@@ -13,6 +13,7 @@ import { BodyComponent } from './components/body/body.component';
 import { AppActivitiesComponent } from './components/app-activities/app-activities.component';
 import { GridBodyComponent } from './components/grid-body/grid-body.component';
 import { DocumentManagementScreenComponent } from './components/document-management-screen/document-management-screen.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { DocumentManagementScreenComponent } from './components/document-managem
     AppActivitiesComponent,
     GridBodyComponent,
     DocumentManagementScreenComponent,
+    LoginComponent,
   ],
   imports: [BrowserModule, AppRoutingModule,FormsModule],
   providers: [provideClientHydration()],

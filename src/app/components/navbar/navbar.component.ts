@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { menuItems } from './menuItem';
+import { menuItems, questions } from './menuItem';
 
 @Component({
   selector: 'app-navbar',
@@ -8,11 +8,15 @@ import { menuItems } from './menuItem';
 })
 export class NavbarComponent {
   menu = menuItems;
+  question = questions;
+
   activeItem: string = 'home';
   options: string[] = ['All', 'Some', ' Other'];
   defOption: string = 'All';
   showLoginForm: boolean = false;
   isSidebarOpen: boolean = false;
+  isQuestion: boolean = false;
+
 
   setActive(menuItem: string): void {
     this.activeItem = menuItem;
@@ -24,6 +28,10 @@ export class NavbarComponent {
 
   toggleLoginForm(): void {
     this.showLoginForm = !this.showLoginForm;
+  }
+
+  toggleQuestion(): void {
+    this.isQuestion = !this.isQuestion;
   }
 
   toggleSidebar(): void {
