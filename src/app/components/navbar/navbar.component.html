@@ -68,8 +68,20 @@
 
   <div class="navbar-items">
     <ul>
+      <i
+        class="fa fa-bars hamburger_icon pinbar-icon"
+        (click)="togglePinbar()"
+      ></i>
       <li
-        *ngFor="let item of menu"
+        (click)="setActive('home')"
+        [ngClass]="{ active: activeItem === 'home' }"
+        [routerLink]="'/home'"
+      >
+        <a> My Home</a>
+      </li>
+      <div class="divider"></div>
+      <li
+        *ngFor="let item of pinMenuItems"
         [ngClass]="{ active: activeItem === item.key }"
         (click)="setActive(item.key)"
         [routerLink]="item.route"
@@ -79,15 +91,15 @@
           <i *ngIf="item.icon" class="fa-solid" [ngClass]="item.icon"></i>
         </a>
       </li>
-    </ul>
 
-    <div class="navbar-back">
-      <span
-        [ngClass]="{ active: activeItem === 'more' }"
-        (click)="setActive('more')"
-        >More<i class="fa-solid fa-chevron-down"></i
-      ></span>
-    </div>
+      <div class="navbar-back">
+        <span
+          [ngClass]="{ active: activeItem === 'more' }"
+          (click)="setActive('more')"
+          >More<i class="fa-solid fa-chevron-down"></i
+        ></span>
+      </div>
+    </ul>
   </div>
 
   <i
@@ -97,11 +109,32 @@
   ></i>
 
   <i
-    class="fa fa-bars hamburger_icon"
+    class="fa fa-bars hamburger_icon sidebar-icon"
     (click)="toggleSidebar()"
     *ngIf="!isSidebarOpen"
   ></i>
 </nav>
+
+<!-- for pinbar -->
+<div class="pinbar" [class.open]="isPinbarOpen">
+  <ul>
+    <li *ngFor="let item of menu">
+      <a
+        [ngClass]="{ active: activeItem === item.key }"
+        (click)="setActive(item.key)"
+        [routerLink]="item.route"
+      >
+        {{ item.name }}
+      </a>
+      <span (click)="pinMenu(item)" *ngIf="item.isPin">
+        <i class="fa-solid fa-thumbtack"></i>
+      </span>
+      <span (click)="pinMenu(item)" *ngIf="!item.isPin">
+        <i class="fa-solid fa-thumbtack-slash"></i>
+      </span>
+    </li>
+  </ul>
+</div>
 
 <!-- for questionbar -->
 <div class="questionbar" [class.open]="isQuestion">

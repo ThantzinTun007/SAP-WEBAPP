@@ -1,39 +1,91 @@
 export const menuItems = [
-  { key: 'home', name: 'My Home', route: '/home', icon: '' },
   {
-    key: 'document',
-    name: 'Document Management',
+    key: 'master',
+    name: 'Master Data - Business',
     route: '/document',
     icon: '',
+    isPin: false,
   },
-  { key: 'bom', name: 'BOM Management', route: '#', icon: '' },
-  { key: 'orderBom', name: 'Order BOM Management', route: '#', icon: '' },
+  {
+    key: 'product',
+    name: 'Master Data - Product',
+    route: '#',
+    icon: '',
+    isPin: false,
+  },
+  {
+    key: 'orderBom',
+    name: 'Master Data Maintanane',
+    route: '#',
+    icon: '',
+    isPin: false,
+  },
   {
     key: 'purchasing',
-    name: 'Purchasing',
+    name: 'Service Management',
     route: '#',
     icon: 'fa-chevron-down',
+    isPin: false,
   },
   {
     key: 'sourcing',
-    name: 'Sourcing and Contracting',
+    name: 'Billing',
     route: '#',
     icon: 'fa-chevron-down',
+    isPin: false,
   },
   {
     key: 'engDiscrete',
-    name: 'Engineering-Discrete',
+    name: 'Accounts Receivable',
     route: '#',
     icon: 'fa-chevron-down',
+    isPin: false,
   },
   {
     key: 'engProcess',
-    name: 'Engineering-Process',
+    name: 'Cridit Management',
     route: '#',
     icon: 'fa-chevron-down',
+    isPin: false,
+  },
+  {
+    key: 'admin',
+    name: 'Administration',
+    route: '#',
+    icon: 'fa-chevron-down',
+    isPin: false,
+  },
+  {
+    key: 'docu',
+    name: 'Document Management',
+    route: '#',
+    icon: 'fa-chevron-down',
+    isPin: false,
+  },
+  {
+    key: 'purch',
+    name: 'Purchasing',
+    route: '#',
+    icon: 'fa-chevron-down',
+    isPin: false,
+  },
+
+  {
+    key: 'bom',
+    name: 'Order BOM Management',
+    route: '#',
+    icon: 'fa-chevron-down',
+    isPin: false,
+  },
+
+  {
+    key: 'software',
+    name: 'Software Constraints',
+    route: '#',
+    icon: 'fa-chevron-down',
+    isPin: false,
   },
 ];
-
 
 export const questions = [
   'Find Help',
@@ -44,5 +96,5 @@ export const questions = [
   'To Dos',
   'Pages',
   'Apps and Activities',
-  'Insights'
-]
+  'Insights',
+];

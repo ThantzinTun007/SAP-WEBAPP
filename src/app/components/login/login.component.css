@@ -71,3 +71,8 @@
   background-color: transparent;
   border: 2px solid #6797e3;
 }
+
+.error {
+  font-size: 12px;
+  color: rgb(220, 81, 81);
+}
