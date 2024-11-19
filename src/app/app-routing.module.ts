@@ -6,7 +6,7 @@ import { DocumentManagementScreenComponent } from './components/document-managem
 import { LoginComponent } from './components/login/login.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   {path: 'login', component: LoginComponent},
   {path: 'home', component: BodyComponent},
   {path:'document', component: DocumentManagementScreenComponent}

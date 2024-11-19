@@ -61,11 +61,13 @@
 .btn {
   width: 40%;
   height: 40px;
-  background-color: #6797e3;
+  background-color: #4871b3;
   color: rgba(224, 221, 221, 0.905);
+  border: none;
+  cursor: pointer;
 }
 
-
-.btn:hover{
-  background-color: #3062b2;
+.btn:hover {
+  background-color: transparent;
+  border: 2px solid #6797e3;
 }
