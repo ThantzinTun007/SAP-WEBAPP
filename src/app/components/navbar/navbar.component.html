@@ -31,13 +31,14 @@
           <!-- User Form -->
 
           <div class="login-form" *ngIf="showLoginForm">
-            <p>User</p>
-            <ul *ngFor="let profile of profile">
-              <li>
+            <div class="profile-name">User</div>
+
+            <div class="profile-menu-container" *ngFor="let profile of profile">
+              <div class="profile-menu" [routerLink]="profile.route">
                 <i [class]="profile.icon"></i>
                 <span>{{ profile.text }}</span>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -142,3 +143,7 @@
 
   <span class="menu_style explore hidden-explore">More</span>
 </div>
+
+
+
+<!-- for about me -->

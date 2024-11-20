@@ -100,12 +100,12 @@ export const questions = [
 ];
 
 export const profile = [
-  { icon: 'fa-solid fa-user-clock', text: 'Recent Acrivities' },
-  { icon: 'fa-solid fa-clipboard-user', text: 'Frequently Used' },
-  { icon: 'fa-solid fa-fire', text: 'App Finder' },
-  { icon: 'fa-solid fa-gear', text: 'Settings' },
-  { icon: 'fa-solid fa-pen', text: 'Edit Current Page' },
-  { icon: 'fa-solid fa-info', text: 'About' },
-  { icon: 'fa-solid fa-chalkboard-user', text: 'My User Sessions' },
-  { icon: 'fa-solid fa-power-off', text: 'Sign Out' },
+  { route: '/home',icon: 'fa-solid fa-user-clock', text: 'Recent Acrivities' },
+  { route: '/home',icon: 'fa-solid fa-clipboard-user', text: 'Frequently Used' },
+  { route: '/home',icon: 'fa-solid fa-fire', text: 'App Finder' },
+  { route: '/home',icon: 'fa-solid fa-gear', text: 'Settings' },
+  { route: '/home',icon: 'fa-solid fa-pen', text: 'Edit Current Page' },
+  { route: '/home',icon: 'fa-solid fa-info', text: 'About' },
+  { route: '/home',icon: 'fa-solid fa-chalkboard-user', text: 'My User Sessions' },
+  { route: '/login',icon: 'fa-solid fa-power-off', text: 'Sign Out' },
 ];
