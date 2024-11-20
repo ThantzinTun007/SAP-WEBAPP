@@ -29,37 +29,15 @@
           </span>
 
           <!-- User Form -->
-          <div *ngIf="showLoginForm" class="login-form-overlay">
-            <div class="login-form">
-              <button class="close-btn" (click)="toggleLoginForm()">✖</button>
-              <img
-                src="/assets/logo/profile.png"
-                alt="profile"
-                class="profile"
-              />
-              <h3>Thant Zin Tun</h3>
-              <div class="profile-form">
-                <div class="profile-style">
-                  <span>Username</span>
-                  <p>Thant Zin Tun</p>
-                </div>
 
-                <div class="profile-style">
-                  <span>Email</span>
-                  <p>tztun&commat;.com</p>
-                </div>
-
-                <div class="profile-style">
-                  <span>Address</span>
-                  <p>Mandalay</p>
-                </div>
-
-                <div class="profile-style">
-                  <span>DOB</span>
-                  <p>DEC 7,2001</p>
-                </div>
-              </div>
-            </div>
+          <div class="login-form" *ngIf="showLoginForm">
+            <p>User</p>
+            <ul *ngFor="let profile of profile">
+              <li>
+                <i [class]="profile.icon"></i>
+                <span>{{ profile.text }}</span>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

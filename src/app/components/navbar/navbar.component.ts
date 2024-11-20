@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { menuItems, questions } from './menuItem';
+import { menuItems, profile, questions } from './menuItem';
 
 @Component({
   selector: 'app-navbar',
@@ -10,6 +10,7 @@ export class NavbarComponent {
   menu = menuItems;
   question = questions;
   pinMenuItems: any[] = [];
+  profile = profile;
 
   activeItem: string = 'home';
   options: string[] = ['All', 'Some', ' Other'];
