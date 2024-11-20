@@ -24,7 +24,7 @@ export const menuItems = [
     key: 'purchasing',
     name: 'Service Management',
     route: '#',
-    icon: 'fa-chevron-down',
+    icon: '',
     isPin: false,
   },
   {
@@ -38,35 +38,35 @@ export const menuItems = [
     key: 'engDiscrete',
     name: 'Accounts Receivable',
     route: '#',
-    icon: 'fa-chevron-down',
+    icon: '',
     isPin: false,
   },
   {
     key: 'engProcess',
     name: 'Cridit Management',
     route: '#',
-    icon: 'fa-chevron-down',
+    icon: '',
     isPin: false,
   },
   {
     key: 'admin',
     name: 'Administration',
     route: '#',
-    icon: 'fa-chevron-down',
+    icon: '',
     isPin: false,
   },
   {
     key: 'docu',
     name: 'Document Management',
     route: '#',
-    icon: 'fa-chevron-down',
+    icon: '',
     isPin: false,
   },
   {
     key: 'purch',
     name: 'Purchasing',
     route: '#',
-    icon: 'fa-chevron-down',
+    icon: '',
     isPin: false,
   },
 
@@ -74,7 +74,7 @@ export const menuItems = [
     key: 'bom',
     name: 'Order BOM Management',
     route: '#',
-    icon: 'fa-chevron-down',
+    icon: '',
     isPin: false,
   },
 
@@ -109,3 +109,11 @@ export const profile = [
   { route: '/home',icon: 'fa-solid fa-chalkboard-user', text: 'My User Sessions' },
   { route: '/login',icon: 'fa-solid fa-power-off', text: 'Sign Out' },
 ];
+
+
+export const category = [
+  'Overview',
+  'Billing Processing',
+  'Sales Rebates',
+  'Sales Commisions',
+]

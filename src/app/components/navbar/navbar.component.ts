@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { menuItems, profile, questions } from './menuItem';
+import { category, menuItems, profile, questions } from './menuItem';
 
 @Component({
   selector: 'app-navbar',
@@ -11,6 +11,7 @@ export class NavbarComponent {
   question = questions;
   pinMenuItems: any[] = [];
   profile = profile;
+  categorys = category;
 
   activeItem: string = 'home';
   options: string[] = ['All', 'Some', ' Other'];
@@ -19,6 +20,7 @@ export class NavbarComponent {
   isSidebarOpen: boolean = false;
   isQuestion: boolean = false;
   isPinbarOpen: boolean = false;
+  isCategoryOpen: boolean = false;
 
   setActive(menuItem: string): void {
     this.activeItem = menuItem;
@@ -52,5 +54,9 @@ export class NavbarComponent {
     } else {
       this.pinMenuItems.push(menu);
     }
+  }
+
+  toggleCategory() {
+    this.isCategoryOpen = !this.isCategoryOpen;
   }
 }

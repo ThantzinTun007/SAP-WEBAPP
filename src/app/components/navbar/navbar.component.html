@@ -67,7 +67,12 @@
       >
         <a>
           {{ item.name }}
-          <i *ngIf="item.icon" class="fa-solid" [ngClass]="item.icon"></i>
+          <i
+            *ngIf="item.icon"
+            class="fa-solid"
+            [ngClass]="item.icon"
+            (click)="toggleCategory()"
+          ></i>
         </a>
       </li>
 
@@ -144,6 +149,9 @@
   <span class="menu_style explore hidden-explore">More</span>
 </div>
 
-
-
-<!-- for about me -->
+<!-- for category -->
+<div class="category-container" [class.open]="isCategoryOpen">
+  <div class="category" *ngFor="let category of categorys">
+    <a>{{category}}</a>
+  </div>
+</div>
