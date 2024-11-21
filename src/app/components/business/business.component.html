@@ -1,0 +1,50 @@
+<div class="master-data-business">
+  <div class="card-container">
+    <h5>Master Data Maintenance</h5>
+    <div class="card-display">
+      <div class="card-style" *ngFor="let data of data">
+        <div class="des">{{ data.description }}</div>
+        <i [class]="data.icon"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-container">
+    <h5>Mass Maintenance</h5>
+    <div class="card-display">
+      <div class="card-style" *ngFor="let mass of mass">
+        <div class="des">
+          {{ mass.header }} <span>{{ mass.description }}</span>
+        </div>
+
+        <i [class]="mass.icon"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-container">
+    <h5>Mass Load</h5>
+    <div class="card-display">
+      <div class="card-style" *ngFor="let ml of massLoads">
+        <div class="des">
+          {{ ml.header }} <span>{{ ml.description }}</span>
+        </div>
+
+        <i [class]="ml.icon"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-container">
+    <h5>Data Quality Remediation</h5>
+    <div class="card-display">
+      <div class="card-style" *ngFor="let dq of dq">
+        <div class="des">
+          {{ dq.header }} <span>{{ dq.description }}</span>
+        </div>
+
+        <i [class]="dq.icon"></i>
+      </div>
+    </div>
+  </div>
+</div>

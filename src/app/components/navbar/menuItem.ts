@@ -2,7 +2,7 @@ export const menuItems = [
   {
     key: 'master',
     name: 'Master Data - Business',
-    route: '/document',
+    route: '/business',
     icon: '',
     isPin: false,
   },

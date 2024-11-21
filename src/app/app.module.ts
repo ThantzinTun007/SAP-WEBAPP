@@ -12,8 +12,9 @@ import { PagesBodyComponent } from './components/pages-body/pages-body.component
 import { BodyComponent } from './components/body/body.component';
 import { AppActivitiesComponent } from './components/app-activities/app-activities.component';
 import { GridBodyComponent } from './components/grid-body/grid-body.component';
-import { DocumentManagementScreenComponent } from './components/document-management-screen/document-management-screen.component';
+
 import { LoginComponent } from './components/login/login.component';
+import { BusinessComponent } from './components/business/business.component';
 
 @NgModule({
   declarations: [
@@ -23,10 +24,10 @@ import { LoginComponent } from './components/login/login.component';
     BodyComponent,
     AppActivitiesComponent,
     GridBodyComponent,
-    DocumentManagementScreenComponent,
     LoginComponent,
+    BusinessComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule,FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],
 })
