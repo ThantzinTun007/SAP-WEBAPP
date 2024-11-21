@@ -9,7 +9,57 @@ import { category, menuItems, profile, questions } from './menuItem';
 export class NavbarComponent {
   menu = menuItems;
   question = questions;
-  pinMenuItems: any[] = [];
+  pinMenuItems: any[] = [
+    {
+      key: 'master',
+      name: 'Master Data - Business',
+      route: '/business',
+      icon: '',
+      isPin: true,
+    },
+    {
+      key: 'product',
+      name: 'Master Data - Product',
+      route: '#',
+      icon: '',
+      isPin: true,
+    },
+    {
+      key: 'orderBom',
+      name: 'Master Data Maintanane',
+      route: '#',
+      icon: '',
+      isPin: true,
+    },
+    {
+      key: 'purchasing',
+      name: 'Service Management',
+      route: '#',
+      icon: '',
+      isPin: true,
+    },
+    {
+      key: 'sourcing',
+      name: 'Billing',
+      route: '#',
+      icon: 'fa-chevron-down',
+      isPin: true,
+    },
+    {
+      key: 'engDiscrete',
+      name: 'Accounts Receivable',
+      route: '#',
+      icon: '',
+      isPin: true,
+    },
+    {
+      key: 'engProcess',
+      name: 'Cridit Management',
+      route: '#',
+      icon: '',
+      isPin: true,
+    },
+  ];
   profile = profile;
   categorys = category;
 
