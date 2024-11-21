@@ -8,4 +8,5 @@ import { pagesData } from './pages-data';
 })
 export class PagesBodyComponent {
   pageData = pagesData;
+  
 }

@@ -1,14 +1,30 @@
-<div class="pages-container">
-  <div class="page-header">
-    <h6>Pages</h6>
-    <a href="#">Edit</a>
+<div class="news-pages-container">
+  <div class="news-container">
+    <div class="page-header">
+      <h6>News</h6>
+
+      <div class="news-box-style">
+        <div class="inner-opacity">
+          <div>
+            <h5>Assets Management</h5>
+            <p>Discover the new features and changes in this release</p>
+          </div>
+          <div class="sap-text">SAP S/4HANA Cloud 2408</div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="page-box-container">
-    <div *ngFor="let pages of pageData">
-      <div class="box-style" [class]="pages.background">
-        <i class="pages-icon" [class]="pages.icon"></i>
-        <p class="pages-header">{{ pages.header }}</p>
-        <p class="pages-text">{{ pages.label }}</p>
+  <div class="pages-container">
+    <div class="page-header">
+      <h6>Pages</h6>
+    </div>
+    <div class="page-box-container">
+      <div *ngFor="let pages of pageData">
+        <div class="box-style" [class]="pages.background">
+          <i class="pages-icon" [class]="pages.icon"></i>
+          <p class="pages-header">{{ pages.header }}</p>
+          <p class="pages-text">{{ pages.label }}</p>
+        </div>
       </div>
     </div>
   </div>

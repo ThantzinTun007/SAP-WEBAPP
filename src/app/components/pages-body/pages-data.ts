@@ -35,4 +35,16 @@ export const pagesData = [
     label: 'Accounts Receivable',
     background: 'bg-syan',
   },
+  {
+    icon: 'fa-regular fa-user',
+    header: 'Software Constraints',
+    label: '',
+    background: 'bg-green',
+  },
+  {
+    icon: 'fa-regular fa-user',
+    header: 'Purchase Order ',
+    label: 'Purchasing',
+    background: 'bg-violet',
+  },
 ];
