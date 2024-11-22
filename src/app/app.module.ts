@@ -15,6 +15,7 @@ import { GridBodyComponent } from './components/grid-body/grid-body.component';
 
 import { LoginComponent } from './components/login/login.component';
 import { BusinessComponent } from './components/business/business.component';
+import { ExportMasterDataScreenComponent } from './components/export-master-data-screen/export-master-data-screen.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { BusinessComponent } from './components/business/business.component';
     GridBodyComponent,
     LoginComponent,
     BusinessComponent,
+    ExportMasterDataScreenComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [provideClientHydration()],

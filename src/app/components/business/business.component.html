@@ -12,7 +12,7 @@
   <div class="card-container">
     <h5>Mass Maintenance</h5>
     <div class="card-display">
-      <div class="card-style" *ngFor="let mass of mass">
+      <div class="card-style" *ngFor="let mass of mass" [routerLink]="mass.route">
         <div class="des">
           {{ mass.header }} <span>{{ mass.description }}</span>
         </div>
