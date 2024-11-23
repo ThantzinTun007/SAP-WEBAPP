@@ -36,8 +36,8 @@ export const menuItems = [
   },
   {
     key: 'engDiscrete',
-    name: 'Accounts Receivable',
-    route: '/business',
+    name: 'Manage Journal Entries',
+    route: '/manage',
     icon: '',
     isPin: true,
   },

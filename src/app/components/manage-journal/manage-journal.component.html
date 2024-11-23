@@ -1,0 +1,87 @@
+<div class="manage-container">
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-logo-searchbar">
+        <div class="logo-container">
+          <span routerLink="/home"><i class="fa-solid fa-angle-left"></i></span>
+          <img src="/assets/logo/SAP_logo.png" alt="logo" class="ms-4" />
+          <span
+            >Manage Journal Entries<i class="fa-solid fa-angle-down"></i
+          ></span>
+        </div>
+        <div class="searchbar-container">
+          <div class="all-btn">
+            <select id="optionsDropdown" [(ngModel)]="defOption">
+              <option *ngFor="let option of options" [value]="option">
+                {{ option }}
+              </option>
+            </select>
+          </div>
+          <div class="searchbar"></div>
+          <input type="text" class="search-icon" placeholder="Search" />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="noti-profile-container">
+          <i class="fa-regular fa-circle-question"> </i>
+
+          <i class="fa-regular fa-bell"></i>
+          <div class="user-icon-container">
+            <i class="fa-regular fa-circle-user"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- for body -->
+  <div class="manage-body-container">
+    <div class="header-filter-container">
+      <div class="header-container">
+        <div class="header blue-font-color">
+          Standard<i class="fa-solid fa-angle-down ms-2"></i>
+        </div>
+        <div class="btn-container">
+          <button class="btn blue-font-color">Verify Journal Enteries</button>
+          <button class="btn blue-font-color">Display Change Log</button>
+          <button class="btn blue-font-color">View Reversal Logs</button>
+          <i class="blue-font-color fa-regular fa-share-from-square"></i>
+          <i class="blue-font-color fa-solid fa-angle-down ms-2"></i>
+        </div>
+      </div>
+
+      <!-- for filter -->
+      <div class="filter-design-container">
+        <div class="input-container">
+          <div class="input-style" >
+            <div class="text-white">Code</div>
+            <input type="text" />
+          </div>
+          <div class="input-style" >
+            <div class="text-white">Code</div>
+            <input type="text" />
+          </div>
+          <div class="input-style" >
+            <div class="text-white">Code</div>
+            <input type="text" />
+          </div>
+          <div class="input-style" >
+            <div class="text-white">Code</div>
+            <input type="text" />
+          </div>
+          <div class="input-style" >
+            <div class="text-white">Code</div>
+            <input type="text" />
+          </div>
+          <div class="input-style" >
+            <div class="text-white">Code</div>
+            <input type="text" />
+          </div>
+        </div>
+        <div class="filter-btn-container">
+            <button class="go-btn">Go</button>
+            <button class="adapt-btn blue-font-color">Adapt Filters</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

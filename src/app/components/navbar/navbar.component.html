@@ -136,6 +136,13 @@
 
 <!-- for sidebar menu -->
 <div class="sidebar" [class.open]="isSidebarOpen">
+  <span
+    class="menu_style explore hidden-explore"
+    (click)="setActive('home')"
+    [ngClass]="{ active: activeItem === 'home' }"
+    [routerLink]="'/home'"
+    >My Home</span
+  >
   <div
     class="sidebar-menu"
     *ngFor="let item of menu"
@@ -152,6 +159,6 @@
 <!-- for category -->
 <div class="category-container" [class.open]="isCategoryOpen">
   <div class="category" *ngFor="let category of categorys">
-    <a>{{category}}</a>
+    <a>{{ category }}</a>
   </div>
 </div>

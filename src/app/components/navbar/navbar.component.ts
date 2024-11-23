@@ -47,8 +47,8 @@ export class NavbarComponent {
     },
     {
       key: 'engDiscrete',
-      name: 'Accounts Receivable',
-      route: '#',
+      name: 'Manage Journal Entries',
+      route: '/manage',
       icon: '',
       isPin: true,
     },

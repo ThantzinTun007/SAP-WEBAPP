@@ -298,6 +298,8 @@
   flex-direction: column;
   padding: 10px 0px 15px 0px;
   z-index: 1200;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .sidebar.open {
@@ -335,9 +337,7 @@
   font-size: 15px;
   color: #f1f3f3;
   padding: 16px 20px;
-  background-color: #0098e0;
-  position: fixed;
-  bottom: 0;
+  background-color: #3A556B ;
   cursor: pointer;
 }
 
@@ -393,7 +393,7 @@
 }
 
 .questionbar .questions:hover {
-  background-color: #0098e0;
+  background-color: #3A556B;
 }
 
 .questions a {
@@ -449,7 +449,7 @@
 }
 
 .pinbar ul li.active {
-  background-color: #f0f0f0;
+  background-color: #d00808;
 }
 
 .pinbar ul li a {
