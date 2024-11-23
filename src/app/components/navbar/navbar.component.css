@@ -116,7 +116,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  z-index: 1000;
+  z-index: 1300;
 }
 
 .login-form .profile-name {
@@ -297,7 +297,7 @@
   display: flex;
   flex-direction: column;
   padding: 10px 0px 15px 0px;
-  z-index: 9;
+  z-index: 1200;
 }
 
 .sidebar.open {
