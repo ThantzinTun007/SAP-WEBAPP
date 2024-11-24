@@ -52,7 +52,7 @@
       <!-- for filter -->
       <div class="filter-design-container">
         <div class="input-container">
-          <div class="input-style" *ngFor="let document of documentData">
+          <div class="input-style" *ngFor="let document of defInput">
             <div class="text text-white">{{ document.text }}</div>
             <div class="input">
               <input [type]="document.type" />
@@ -62,7 +62,123 @@
         </div>
         <div class="filter-btn-container">
           <button class="go-btn">Go</button>
-          <button class="adapt-btn blue-font-color">Adapt Filters</button>
+          <button class="adapt-btn blue-font-color" (click)="openPopup()">
+            Adapt Filters
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- for popup overlay -->
+    <div *ngIf="showPopup" class="popup-overlay">
+      <div class="popup-box">
+        <div class="popup-header">
+          <h3>Adapt Filters</h3>
+          <button class="reset-btn" (click)="resetFilters()">Reset</button>
+        </div>
+        <div class="popup-body">
+          <table>
+            <thead>
+              <tr>
+                <th>Field</th>
+                <th>Active</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of documentData">
+                <td>{{ item.text }}</td>
+                <td>
+                  <input
+                    type="checkbox"
+                    [checked]="item.isCheck"
+                    (change)="toggleCheck(item)"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="popup-footer">
+          <button class="ok-btn" (click)="applyFilters()">OK</button>
+          <button class="cancel-btn" (click)="closePopup()">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- for listview -->
+  <div class="journal-list-container">
+    <div class="list-header">
+      <div class="front-header">
+        <div class="jorunal-text">Journal Entries</div>
+        <div class="divider"></div>
+        <div class="header blue-font-color">
+          Standard<i class="fa-solid fa-angle-down ms-2"></i>
+        </div>
+      </div>
+      <div class="back-btn">
+        <span>Create</span>
+        <button (click)="openListview()">
+          <i class="fa-solid fa-gear"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="table-container">
+      <table class="custom-table">
+        <thead>
+          <tr>
+            <th><input type="checkbox" /></th>
+            <ng-container *ngFor="let listTit of listTitle">
+              <th *ngIf="listTit.isCheck">
+                {{ listTit.title }}
+              </th>
+            </ng-container>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let list of selectList">
+            <td><input type="checkbox" /></td>
+            <ng-container *ngFor="let listTit of listTitle">
+              <td *ngIf="listTit.isCheck">
+                {{ list[listTit.key].text }}
+              </td>
+            </ng-container>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div *ngIf="showListview" class="popup-overlay">
+      <div class="popup-box">
+        <div class="popup-header">
+          <h3>View Setting</h3>
+          <button class="reset-btn" (click)="resetListview()">Reset</button>
+        </div>
+        <div class="popup-body">
+          <table>
+            <thead>
+              <tr>
+                <th>Field</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of listData">
+                <td>{{ item.title }}</td>
+                <td>
+                  <input
+                    type="checkbox"
+                    [checked]="item.isCheck"
+                    (change)="listCheck(item)"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="popup-footer">
+          <button class="ok-btn" (click)="addListview()">OK</button>
+          <button class="cancel-btn" (click)="closeListview()">Cancel</button>
         </div>
       </div>
     </div>
