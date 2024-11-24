@@ -52,34 +52,17 @@
       <!-- for filter -->
       <div class="filter-design-container">
         <div class="input-container">
-          <div class="input-style" >
-            <div class="text-white">Code</div>
-            <input type="text" />
-          </div>
-          <div class="input-style" >
-            <div class="text-white">Code</div>
-            <input type="text" />
-          </div>
-          <div class="input-style" >
-            <div class="text-white">Code</div>
-            <input type="text" />
-          </div>
-          <div class="input-style" >
-            <div class="text-white">Code</div>
-            <input type="text" />
-          </div>
-          <div class="input-style" >
-            <div class="text-white">Code</div>
-            <input type="text" />
-          </div>
-          <div class="input-style" >
-            <div class="text-white">Code</div>
-            <input type="text" />
+          <div class="input-style" *ngFor="let document of documentData">
+            <div class="text text-white">{{ document.text }}</div>
+            <div class="input">
+              <input [type]="document.type" />
+              <i [class]="document.icon"></i>
+            </div>
           </div>
         </div>
         <div class="filter-btn-container">
-            <button class="go-btn">Go</button>
-            <button class="adapt-btn blue-font-color">Adapt Filters</button>
+          <button class="go-btn">Go</button>
+          <button class="adapt-btn blue-font-color">Adapt Filters</button>
         </div>
       </div>
     </div>

@@ -188,19 +188,35 @@
   height: auto;
 }
 
-.input-container .input-style div {
+.input-container .input-style .text {
   font-size: 13px;
   color: #d6d6d7ea;
 }
 
+.input-container .input-style .input {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
 .input-container .input-style input {
   width: 100%;
+  padding: 2px 8px;
+  font-size: 1rem;
+  color: white;
   background-color: transparent;
-  border: 1px solid grey;
   outline: none;
-  margin-top: 6px;
-  color: aliceblue;
-  padding: 2px 5px;
+  border: 1px solid #6b6a6ad2;
+  border-radius: 4px;
+}
+
+.input-container .input-style i {
+  position: absolute;
+  right: 10px;
+  font-size: 14px;
+  color: rgb(104, 152, 197);
+  cursor: pointer;
 }
 
 .filter-design-container .filter-btn-container {
