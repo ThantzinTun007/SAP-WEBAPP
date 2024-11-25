@@ -117,7 +117,7 @@
         </div>
       </div>
       <div class="back-btn">
-        <span>Create</span>
+        <span (click)="openCreateform()">Create</span>
         <button (click)="openListview()">
           <i class="fa-solid fa-gear"></i>
         </button>
@@ -181,6 +181,32 @@
           <button class="cancel-btn" (click)="closeListview()">Cancel</button>
         </div>
       </div>
+    </div>
+  </div>
+
+  <!-- for createForm -->
+  <div class="create-form-container" *ngIf="showCreateform">
+    <div class="create-header">
+      <h5>Header</h5>
+    </div>
+
+    <div class="create-form">
+      <div
+        class="create-input-container"
+        *ngFor="let header of listData; let i = index"
+      >
+        <label>{{ header.title }}</label>
+        <input
+          [type]="header.type"
+          class="create-input"
+          [(ngModel)]="formData[header.key]"
+        />
+      </div>
+    </div>
+
+    <div class="post-conrtainer">
+      <button class="btn" (click)="closeCreateform()">Cancel</button>
+      <button class="post-btn" (click)="postData()">POST</button>
     </div>
   </div>
 </div>

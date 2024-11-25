@@ -7,12 +7,13 @@ export const menuItems = [
     isPin: true,
   },
   {
-    key: 'product',
-    name: 'Master Data - Product',
-    route: '/business',
+    key: 'engDiscrete',
+    name: 'Manage Journal Entries',
+    route: '/manage',
     icon: '',
     isPin: true,
   },
+
   {
     key: 'orderBom',
     name: 'Master Data Maintanane',
@@ -35,9 +36,9 @@ export const menuItems = [
     isPin: true,
   },
   {
-    key: 'engDiscrete',
-    name: 'Manage Journal Entries',
-    route: '/manage',
+    key: 'product',
+    name: 'Master Data - Product',
+    route: '/business',
     icon: '',
     isPin: true,
   },

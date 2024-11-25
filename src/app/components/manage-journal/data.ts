@@ -67,19 +67,31 @@ export const document = [
 ];
 
 export const list = [
-  { title: 'Journal Entry', key: 'journalEntry', isCheck: true },
-  { title: 'Journal Entry Type', key: 'journalEntryType', isCheck: true },
-  { title: 'Company Code', key: 'companyCode', isCheck: true },
-  { title: 'Journal Entry Date', key: 'journalEntryDate', isCheck: true },
-  { title: 'Posting Date', key: 'postingDate', isCheck: true },
+  { title: 'Journal Entry', key: 'journalEntry', isCheck: true, type: 'text' },
+  {
+    title: 'Journal Entry Type',
+    key: 'journalEntryType',
+    isCheck: true,
+    type: 'text',
+  },
+  { title: 'Company Code', key: 'companyCode', isCheck: true, type: 'text' },
+  {
+    title: 'Journal Entry Date',
+    key: 'journalEntryDate',
+    isCheck: true,
+    type: 'date',
+  },
+  { title: 'Posting Date', key: 'postingDate', isCheck: true, type: 'date' },
   {
     title: 'Amount in Company Code Currency',
     key: 'amountInCompanyCodeCurrency',
     isCheck: false,
+    type: 'text',
   },
   {
     title: 'Document Header Text',
     key: 'documentHeaderText',
     isCheck: false,
+    type: 'text',
   },
 ];

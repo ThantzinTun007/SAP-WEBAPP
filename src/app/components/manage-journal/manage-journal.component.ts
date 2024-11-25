@@ -10,6 +10,15 @@ import { SelectListItem, Title } from '../../title';
 export class ManageJournalComponent {
   options: string[] = ['All', 'Some', ' Other'];
   defOption: string = 'All';
+
+  showPopup = false;
+  documentData = document;
+
+  showListview = false;
+  listData = list;
+
+  showCreateform: boolean = false;
+
   defInput = [
     {
       key: 'entry date',
@@ -48,28 +57,42 @@ export class ManageJournalComponent {
     },
   ];
 
-  showPopup = false;
-  documentData = document;
-
-  showListview = false;
-  listData = list;
   listTitle: Title[] = [
-    { title: 'Journal Entry', key: 'journalEntry', isCheck: true },
-    { title: 'Journal Entry Type', key: 'journalEntryType', isCheck: true },
-    { title: 'Company Code', key: 'companyCode', isCheck: true },
-    { title: 'Journal Entry Date', key: 'journalEntryDate', isCheck: true },
-    { title: 'Posting Date', key: 'postingDate', isCheck: true },
+    {
+      title: 'Journal Entry',
+      key: 'journalEntry',
+      isCheck: true,
+      type: 'text',
+    },
+    {
+      title: 'Journal Entry Type',
+      key: 'journalEntryType',
+      isCheck: true,
+      type: 'text',
+    },
+    { title: 'Company Code', key: 'companyCode', isCheck: true, type: 'text' },
+    {
+      title: 'Journal Entry Date',
+      key: 'journalEntryDate',
+      isCheck: true,
+      type: 'date',
+    },
+    { title: 'Posting Date', key: 'postingDate', isCheck: true, type: 'date' },
     {
       title: 'Amount in Company Code Currency',
       key: 'amountInCompanyCodeCurrency',
       isCheck: false,
+      type: 'text',
     },
     {
       title: 'Document Header Text',
       key: 'documentHeaderText',
       isCheck: false,
+      type: 'text',
     },
   ];
+
+  formData: { [key: string]: any } = {};
 
   selectList: SelectListItem[] = [
     {
@@ -125,5 +148,35 @@ export class ManageJournalComponent {
 
   closeListview() {
     this.showListview = false;
+  }
+
+  // for createform
+  openCreateform() {
+    this.showCreateform = !this.showCreateform;
+  }
+
+  postData() {
+    const newItem = {
+      journalEntry: { text: this.formData['journalEntry'] },
+      journalEntryType: { text: this.formData['journalEntryType'] },
+      companyCode: { text: this.formData['companyCode'] },
+      journalEntryDate: { text: this.formData['journalEntryDate'] },
+      postingDate: { text: this.formData['postingDate'] },
+      amountInCompanyCodeCurrency: {
+        text: this.formData['amountInCompanyCodeCurrency'],
+      },
+      documentHeaderText: { text: this.formData['documentHeaderText'] },
+    };
+    this.selectList.push(newItem);
+    this.clearForm();
+    this.closeCreateform();
+  }
+
+  clearForm() {
+    this.formData = {};
+  }
+
+  closeCreateform() {
+    this.showCreateform = false;
   }
 }

@@ -18,9 +18,9 @@ export class NavbarComponent {
       isPin: true,
     },
     {
-      key: 'product',
-      name: 'Master Data - Product',
-      route: '#',
+      key: 'engDiscrete',
+      name: 'Manage Journal Entries',
+      route: '/manage',
       icon: '',
       isPin: true,
     },
@@ -46,12 +46,13 @@ export class NavbarComponent {
       isPin: true,
     },
     {
-      key: 'engDiscrete',
-      name: 'Manage Journal Entries',
-      route: '/manage',
+      key: 'product',
+      name: 'Master Data - Product',
+      route: '#',
       icon: '',
       isPin: true,
     },
+
     {
       key: 'engProcess',
       name: 'Cridit Management',

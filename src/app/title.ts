@@ -2,6 +2,7 @@ export interface Title {
   title: string;
   key: keyof SelectListItem;
   isCheck: boolean;
+  type: string;
 }
 
 export interface SelectListItem {
