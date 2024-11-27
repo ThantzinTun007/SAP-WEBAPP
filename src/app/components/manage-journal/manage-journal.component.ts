@@ -172,6 +172,10 @@ export class ManageJournalComponent {
     this.closeCreateform();
   }
 
+  deleteData() {
+    
+  }
+
   clearForm() {
     this.formData = {};
   }

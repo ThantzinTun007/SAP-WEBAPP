@@ -144,6 +144,12 @@
                 {{ list[listTit.key].text }}
               </td>
             </ng-container>
+            <td>
+              <i
+                class="fa-solid fa-trash"
+                (click)="deleteData()"
+              ></i>
+            </td>
           </tr>
         </tbody>
       </table>
