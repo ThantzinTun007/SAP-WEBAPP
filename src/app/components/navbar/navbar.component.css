@@ -337,7 +337,7 @@
   font-size: 15px;
   color: #f1f3f3;
   padding: 16px 20px;
-  background-color: #3A556B ;
+  background-color: #3a556b;
   cursor: pointer;
 }
 
@@ -393,7 +393,7 @@
 }
 
 .questionbar .questions:hover {
-  background-color: #3A556B;
+  background-color: #3a556b;
 }
 
 .questions a {

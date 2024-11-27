@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { category, menuItems, profile, questions } from './menuItem';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -7,6 +8,8 @@ import { category, menuItems, profile, questions } from './menuItem';
   styleUrl: './navbar.component.css',
 })
 export class NavbarComponent {
+  constructor(private router: Router) {}
+
   menu = menuItems;
   question = questions;
   pinMenuItems: any[] = [
@@ -26,7 +29,7 @@ export class NavbarComponent {
     },
     {
       key: 'orderBom',
-      name: 'Master Data Maintanane',
+      name: 'Master Data Maintenance',
       route: '#',
       icon: '',
       isPin: true,
@@ -52,15 +55,17 @@ export class NavbarComponent {
       icon: '',
       isPin: true,
     },
-
     {
       key: 'engProcess',
-      name: 'Cridit Management',
+      name: 'Credit Management',
       route: '#',
       icon: '',
       isPin: true,
     },
   ];
+
+  filteredMenuItems: any[] = [...this.pinMenuItems];
+
   profile = profile;
   categorys = category;
 
@@ -79,6 +84,14 @@ export class NavbarComponent {
 
   selectOption(option: string) {
     this.defOption = option;
+  }
+
+  // for search
+  searchMenu(key: string): void {
+    const lowerKey = key.toLowerCase();
+    this.filteredMenuItems = this.pinMenuItems.filter((item) =>
+      item.name.toLowerCase().includes(lowerKey)
+    );
   }
 
   toggleLoginForm(): void {

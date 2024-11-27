@@ -13,9 +13,22 @@
             </option>
           </select>
         </div>
-        <div class="searchbar"></div>
-        <input type="text" class="search-icon" placeholder="Search" />
-        <i class="fa-solid fa-magnifying-glass"></i>
+        <div class="searchbar">
+          <input
+            #searchInput
+            type="text"
+            class="search-icon"
+            placeholder="Search"
+            (input)="searchMenu(searchInput.value)"
+          />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <ul>
+          <li *ngFor="let item of filteredMenuItems">
+            <i class="{{ item.icon }}"></i>
+            <a [href]="item.route">{{ item.name }}</a>
+          </li>
+        </ul>
       </div>
       <div class="noti-profile-container">
         <i class="fa-regular fa-circle-question" (click)="toggleQuestion()">
