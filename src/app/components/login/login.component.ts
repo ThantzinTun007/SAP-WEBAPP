@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
   private validEmail = 'user@gmail.com';
-  private validPassword = '068863';
+  private validPassword = '612002';
 
   errorMessage = '';
 

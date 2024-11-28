@@ -18,26 +18,18 @@ export class BusinessComponent {
   dq = DataQuality;
 
   deleteData(index: number): void {
-    if (confirm('Are you sure you want to delete this card?')) {
-      this.data.splice(index, 1);
-    }
+    this.data.splice(index, 1);
   }
 
   deleteMass(index: number): void {
-    if (confirm('Are you sure you want to delete this item?')) {
-      this.mass.splice(index, 1);
-    }
+    this.mass.splice(index, 1);
   }
 
   deleteMassload(index: number): void {
-    if (confirm('Are you sure you want to delete this item?')) {
-      this.massLoads.splice(index, 1);
-    }
+    this.massLoads.splice(index, 1);
   }
 
   deletedq(index: number): void {
-    if (confirm('Are you sure you want to delete this item?')) {
-      this.dq.splice(index, 1);
-    }
+    this.dq.splice(index, 1);
   }
 }
