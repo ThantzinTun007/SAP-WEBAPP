@@ -172,8 +172,10 @@ export class ManageJournalComponent {
     this.closeCreateform();
   }
 
-  deleteData() {
-    
+  deleteData(index: number): void {
+    if (confirm('Are you sure you want to delete this item?')) {
+      this.selectList.splice(index, 1);
+    }
   }
 
   clearForm() {

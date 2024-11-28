@@ -137,7 +137,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let list of selectList">
+          <tr *ngFor="let list of selectList, let i = index">
             <td><input type="checkbox" /></td>
             <ng-container *ngFor="let listTit of listTitle">
               <td *ngIf="listTit.isCheck">
@@ -147,7 +147,7 @@
             <td>
               <i
                 class="fa-solid fa-trash"
-                (click)="deleteData()"
+                (click)="deleteData(i)"
               ></i>
             </td>
           </tr>
