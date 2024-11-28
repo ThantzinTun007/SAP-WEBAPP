@@ -23,12 +23,6 @@
           />
           <i class="fa-solid fa-magnifying-glass"></i>
         </div>
-        <ul>
-          <li *ngFor="let item of filteredMenuItems">
-            <i class="{{ item.icon }}"></i>
-            <a [href]="item.route">{{ item.name }}</a>
-          </li>
-        </ul>
       </div>
       <div class="noti-profile-container">
         <i class="fa-regular fa-circle-question" (click)="toggleQuestion()">
@@ -174,4 +168,13 @@
   <div class="category" *ngFor="let category of categorys">
     <a>{{ category }}</a>
   </div>
+</div>
+
+<!-- for searchbar -->
+<div class="search-list-container" *ngIf="filteredMenuItems.length <= 5">
+  <ul>
+    <li *ngFor="let item of filteredMenuItems">
+      <a [href]="item.route">{{ item.name }}</a>
+    </li>
+  </ul>
 </div>
