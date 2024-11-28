@@ -11,7 +11,7 @@ export const massMaintenance = [
     header: 'Manage Mass Maintenance',
     description: 'Business Partners',
     icon: 'fa-solid fa-file-invoice',
-    route: '/export',
+    route: '/business',
   },
   {
     header: 'Export Master Data',
@@ -23,13 +23,13 @@ export const massMaintenance = [
     header: 'Manage Mass Maintenance',
     description: 'BP Relationships',
     icon: 'fa-solid fa-file-invoice',
-    route: '/export',
+    route: '/business',
   },
   {
     header: 'Export Master Data',
     description: 'BP Relationships',
     icon: 'fa-solid fa-download',
-    route: '/export',
+    route: '/business',
   },
 ];
 

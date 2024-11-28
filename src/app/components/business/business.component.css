@@ -39,7 +39,21 @@
   cursor: pointer;
 }
 
-.card-container .card-style:hover{
+.card-style .icon-container{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-style button {
+  width: 20px;
+  height: 20px;
+  color: rgb(178, 19, 19);
+  background-color: transparent;
+  border: none;
+} 
+
+.card-container .card-style:hover {
   border: none;
   box-shadow: 6px 2px 4px rgba(24, 24, 24, 0.373);
 }
