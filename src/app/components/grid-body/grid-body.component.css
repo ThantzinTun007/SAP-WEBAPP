@@ -11,9 +11,9 @@
 }
 
 .header h6 {
-  color: grey;
+  color: rgb(61, 60, 60);
   font-weight: 600;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 15px;
 }
 
 .back-header a {

@@ -53,9 +53,9 @@
 }
 
 .page-header h6 {
-  color: grey;
+  font-size: 16px;
+  color: rgb(61, 60, 60);
   font-weight: 600;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 .page-header a {
@@ -111,11 +111,11 @@
   background-color: #0092ae;
 }
 
-.bg-green{
+.bg-green {
   background-color: #0c441b;
 }
 
-.bg-violet{
+.bg-violet {
   background-color: #61166d;
 }
 

@@ -212,8 +212,6 @@
   border-radius: 4px;
 }
 
-
-
 .input-container .input-style i {
   position: absolute;
   right: 10px;
@@ -262,7 +260,7 @@
 }
 
 .popup-box {
-  background: #2b3d4b;
+  background: #313e47;
   border-radius: 8px;
   border: 1px solid rgb(123, 123, 123);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -272,15 +270,18 @@
 }
 
 .popup-header {
+  width: 100%;
+  height: 45px;
+  background-color: #262c30;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 16px;
-  border-bottom: 1px solid #406178;
+  box-shadow: 0.8 5 2 rgb(135, 134, 134);
 }
 
 .popup-header h3 {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   color: rgb(226, 224, 224);
   margin: 0;
@@ -291,11 +292,11 @@
   background: transparent;
   border: none;
   outline: none;
-  color: #406178;
+  color: #507d9d;
 }
 
 .popup-body {
-  padding: 16px;
+  padding: 18px;
   background-color: #181d21;
 }
 
@@ -304,9 +305,16 @@ table {
   border-collapse: collapse;
 }
 
-th,
-td {
+th {
+  font-size: 15px;
   color: rgb(226, 224, 224);
+  text-align: left;
+  padding: 8px;
+}
+
+td {
+  font-size: 13px;
+  color: rgba(226, 224, 224, 0.871);
   text-align: left;
   padding: 8px;
 }
@@ -319,13 +327,18 @@ td input[type="checkbox"] {
 }
 
 .popup-footer {
+  width: 100%;
+  height: 45px;
   display: flex;
   justify-content: flex-end;
-  padding: 16px;
+  align-items: center;
+  padding: 0px 16px;
   border-top: 1px solid #e0e0e0;
 }
 
 .popup-footer button {
+  width: 50px;
+  height: 30px;
   margin-left: 8px;
   padding: 6px 12px;
   border: none;
@@ -337,9 +350,11 @@ td input[type="checkbox"] {
   font-size: 13px;
   background: #007bff;
   color: #fff;
+  font-weight: bold;
 }
 
 .cancel-btn {
+  font-size: 13px;
   background: transparent;
   color: #247ab8;
 }
@@ -431,7 +446,6 @@ td input[type="checkbox"] {
   border-bottom: 1px solid #406178;
 }
 
-
 .custom-table input[type="checkbox"] {
   width: 16px;
   height: 16px;
@@ -459,13 +473,13 @@ td input[type="checkbox"] {
 
 .create-header h5 {
   font-size: 17px;
-  color: #8e8f8f;
+  color: #dbdede;
   font-weight: 700;
 }
 
 .create-form {
   width: 100%;
-  height: 30vh;
+  height: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -475,22 +489,23 @@ td input[type="checkbox"] {
 }
 
 .create-form .create-input-container {
-  width: 400px;
+  width: 350px;
   display: flex;
   margin-bottom: 10px;
 }
 
 .create-input-container label {
-  font-size: 14px;
-  color: #e0e0e0;
-  margin-right: 8px;
+  width: 130px;
+  font-size: 13px;
+  color: #cac8c8e2;
+  margin-right: 3px;
 }
 
 .create-form .create-input {
   width: 250px;
   height: 30px;
   background-color: #323e47;
-  color: #e0e0e0;
+  color: #cac8c8e2;
   border: 1px solid #406178;
   border-radius: 3px;
   outline: none;
@@ -520,11 +535,11 @@ td input[type="checkbox"] {
   border-radius: 5px;
 }
 
-.post-conrtainer .btn{
+.post-conrtainer .btn {
   color: #8e8f8f;
   margin-right: 10px;
 }
 
-.post-conrtainer .post-btn:hover{
+.post-conrtainer .post-btn:hover {
   background-color: #154577;
 }

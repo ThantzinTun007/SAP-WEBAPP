@@ -11,9 +11,9 @@
 }
 
 .header h6 {
-  color: grey;
+  color: rgb(61, 60, 60);
   font-weight: 600;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 15px;
 }
 
 .back-header {
@@ -39,7 +39,7 @@
   height: 40px;
   margin-right: 20px;
   font-size: 13px;
-  color: rgba(41, 40, 40, 0.552);
+  color: rgba(41, 40, 40, 0.722);
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -86,6 +86,7 @@
 
 .name {
   font-size: 12px;
+  color: rgba(53, 54, 54, 0.861);
 }
 
 .hidden {
@@ -98,9 +99,8 @@
   }
 }
 
-
-@media (max-width: 685px){
-  .app-items{
+@media (max-width: 685px) {
+  .app-items {
     width: 50%;
   }
 }
