@@ -89,7 +89,16 @@
           (click)="setActive('billing')"
           >Billing</span
         >
-        <i class="fa-solid fa-chevron-down"></i>
+        <i
+          class="fa-solid fa-chevron-down"
+          (click)="toggleCategory()"
+          *ngIf="!isCategoryOpen"
+        ></i>
+        <i
+          class="fa-solid fa-chevron-up"
+          (click)="toggleCategory()"
+          *ngIf="isCategoryOpen"
+        ></i>
       </div>
 
       <div class="navbar-back">
