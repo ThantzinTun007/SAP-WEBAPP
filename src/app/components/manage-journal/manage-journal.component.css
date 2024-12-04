@@ -190,22 +190,23 @@
 }
 
 .input-container .input-style .text {
-  font-size: 13px;
-  color: #d6d6d7ea;
+  font-size: 12px;
+  color: rgba(225, 225, 226, 0.927);
 }
 
 .input-container .input-style .input {
   position: relative;
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .input-container .input-style input {
   width: 100%;
+  height: 30px;
   padding: 2px 8px;
-  font-size: 1rem;
-  color: white;
+  font-size: 12px;
+  color: rgba(225, 225, 226, 0.927);
   background-color: transparent;
   outline: none;
   border: 1px solid #6b6a6ad2;
@@ -287,6 +288,7 @@
   margin: 0;
 }
 
+
 .reset-btn {
   font-size: 14px;
   background: transparent;
@@ -296,13 +298,17 @@
 }
 
 .popup-body {
-  padding: 18px;
+  /* padding: 18px; */
   background-color: #181d21;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
+}
+
+thead th{
+  padding: 18px;
 }
 
 th {
@@ -315,8 +321,13 @@ th {
 td {
   font-size: 13px;
   color: rgba(226, 224, 224, 0.871);
+  border-bottom: 1px solid #234c69da;
   text-align: left;
-  padding: 8px;
+  padding:8px 18px;
+}
+
+tr.checked{
+  background-color: #2B3C4B;
 }
 
 td input[type="checkbox"] {
@@ -333,7 +344,6 @@ td input[type="checkbox"] {
   justify-content: flex-end;
   align-items: center;
   padding: 0px 16px;
-  border-top: 1px solid #e0e0e0;
 }
 
 .popup-footer button {

@@ -64,6 +64,13 @@ export const document = [
     icon: 'fa-regular fa-clone',
     isCheck: false,
   },
+  {
+    key: 'additional2',
+    text: 'Additional Crcy 2',
+    type: 'text',
+    icon: 'fa-regular fa-clone',
+    isCheck: false,
+  },
 ];
 
 export const list = [

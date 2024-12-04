@@ -53,7 +53,7 @@
       <div class="filter-design-container">
         <div class="input-container">
           <div class="input-style" *ngFor="let document of defInput">
-            <div class="text text-white">{{ document.text }}</div>
+            <div class="text">{{ document.text }}</div>
             <div class="input">
               <input [type]="document.type" />
               <i [class]="document.icon"></i>
@@ -84,8 +84,8 @@
                 <th>Active</th>
               </tr>
             </thead>
-            <tbody>
-              <tr *ngFor="let item of documentData">
+            <tbody *ngFor="let item of documentData">
+              <tr [class.checked]="item.isCheck">
                 <td>{{ item.text }}</td>
                 <td>
                   <input
@@ -128,7 +128,7 @@
       <table class="custom-table">
         <thead>
           <tr>
-            <th><input type="checkbox" /></th>
+            <!-- <th><input type="checkbox" /></th> -->
             <ng-container *ngFor="let listTit of listTitle">
               <th *ngIf="listTit.isCheck">
                 {{ listTit.title }}
@@ -138,7 +138,7 @@
         </thead>
         <tbody>
           <tr *ngFor="let list of selectList; let i = index">
-            <td><input type="checkbox" /></td>
+            <!-- <td><input type="checkbox" /></td> -->
             <ng-container *ngFor="let listTit of listTitle">
               <td *ngIf="listTit.isCheck">
                 {{ list[listTit.key].text }}
@@ -166,7 +166,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let item of listData">
+              <tr *ngFor="let item of listData" [class.checked]="item.isCheck">
                 <td>{{ item.title }}</td>
                 <td>
                   <input
