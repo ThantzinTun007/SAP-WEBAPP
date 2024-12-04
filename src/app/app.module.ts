@@ -17,6 +17,8 @@ import { LoginComponent } from './components/login/login.component';
 import { BusinessComponent } from './components/business/business.component';
 import { ExportMasterDataScreenComponent } from './components/export-master-data-screen/export-master-data-screen.component';
 import { ManageJournalComponent } from './components/manage-journal/manage-journal.component';
+import { OverviewComponent } from './components/overview/overview.component';
+import { BillingScreenComponent } from './components/billing-screen/billing-screen.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { ManageJournalComponent } from './components/manage-journal/manage-journ
     BusinessComponent,
     ExportMasterDataScreenComponent,
     ManageJournalComponent,
+    OverviewComponent,
+    BillingScreenComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [provideClientHydration()],
