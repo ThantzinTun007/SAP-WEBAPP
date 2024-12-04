@@ -28,13 +28,13 @@ export const menuItems = [
     icon: '',
     isPin: true,
   },
-  {
-    key: 'sourcing',
-    name: 'Billing',
-    route: '#',
-    icon: 'fa-chevron-down',
-    isPin: true,
-  },
+  // {
+  //   key: 'sourcing',
+  //   name: 'Billing',
+  //   route: '#',
+  //   icon: 'fa-chevron-down',
+  //   isPin: true,
+  // },
   {
     key: 'product',
     name: 'Master Data - Product',

@@ -41,13 +41,13 @@ export class NavbarComponent {
       icon: '',
       isPin: true,
     },
-    {
-      key: 'sourcing',
-      name: 'Billing',
-      route: '#',
-      icon: 'fa-chevron-down',
-      isPin: true,
-    },
+    // {
+    //   key: 'sourcing',
+    //   name: 'Billing',
+    //   route: '#',
+    //   icon: 'fa-chevron-down',
+    //   isPin: true,
+    // },
     {
       key: 'product',
       name: 'Master Data - Product',
@@ -77,6 +77,7 @@ export class NavbarComponent {
   isQuestion: boolean = false;
   isPinbarOpen: boolean = false;
   isCategoryOpen: boolean = false;
+  
 
   setActive(menuItem: string): void {
     this.activeItem = menuItem;

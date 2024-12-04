@@ -85,10 +85,20 @@
 
       <div class="navbar-back">
         <span
+          [ngClass]="{ active: activeItem === 'billing' }"
+          (click)="setActive('billing')"
+          >Billing</span
+        >
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+
+      <div class="navbar-back">
+        <span
           [ngClass]="{ active: activeItem === 'more' }"
           (click)="setActive('more')"
-          >More<i class="fa-solid fa-chevron-down"></i
-        ></span>
+          >More</span
+        >
+        <i class="fa-solid fa-chevron-down"></i>
       </div>
     </ul>
   </div>
