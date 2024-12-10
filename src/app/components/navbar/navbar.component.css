@@ -240,13 +240,15 @@
 .category-container {
   width: 250px;
   height: 140px;
-  background-color: #E4E9EA;
+  background-color: #ffffff;
   border: 1px solid grey;
+  /* box-shadow: 2px 4px 3px 2px rgba(178, 177, 177, 0.602); */
   position: fixed;
   top: -250px;
   right: 99px;
   transform: translateX();
   transition: 0.3s ease;
+  z-index: 100;
 }
 
 .category-container.open {

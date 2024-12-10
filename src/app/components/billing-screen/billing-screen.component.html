@@ -1,1 +1,79 @@
-<p>billing-screen works!</p>
+<div class="export-screen-container">
+    <a class="backbtn" routerLink="/business"
+      ><i class="fa-solid fa-angle-left"></i
+    ></a>
+    <div class="define-container">
+      <h5>Define Scope</h5>
+      <div class="radio-input">
+        <label class="label">
+          <input type="radio" value="Select Specific Fields" />
+          Select Specific Fields
+        </label>
+        <div class="input-container">
+          <input type="text" class="input-style" />
+        </div>
+      </div>
+  
+      <div class="radio-input">
+        <label>
+          <input type="radio" value="Select Specific Fields" />
+          Select Tables
+        </label>
+        <div class="input-container">
+          <input type="text" class="input-style" />
+        </div>
+      </div>
+  
+      <div class="radio-input">
+        <label>
+          <input type="radio" value="Select Specific Fields" />
+          Select All Fields From All Tables
+        </label>
+        <div class="checkbox-container">
+          <input type="checkbox" class="checkbox" />
+          <label> Including Longs Text Fields</label>
+        </div>
+      </div>
+    </div>
+  
+    <div class="select-container">
+      <h5>Select Business Partners</h5>
+      <div class="select-radio">
+        <label>
+          <input type="radio" value="Select Specific Fields" />
+          By Selection Criteria
+        </label>
+        <div class="dropdown-btn">
+          <button class="btn"><i class="fa-solid fa-angle-down"></i></button>
+          <label>Include</label>
+        </div>
+        <div class="input-container">
+          <input type="search" class="search" />
+          <div class="dropdown-container">
+            <input type="text" class="dropdown"  />
+            <span class="dropdown-arrow"></span>
+          </div>
+          <input type="text" class="value-input" placeholder="Value" />
+          <i class="fa-solid fa-xmark"></i>
+          <i class="fa-solid fa-plus"></i>
+        </div>
+        <div class="dropdown-btn">
+          <button class="btn"><i class="fa-solid fa-angle-right"></i></button>
+          <label>Exclude</label>
+        </div>
+        <div class="checkbox-container">
+          <input type="checkbox" class="checkbox" />
+          <label class="ms-2">Use Selection Criteria as Filter</label>
+        </div>
+  
+        <label>
+          <input type="radio" value="Select Specific Fields" />
+          By Process ID
+        </label>
+        <div class="process">
+          <input type="text" />
+        </div>
+      </div>
+    </div>
+  </div>
+  
